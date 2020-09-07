@@ -4,7 +4,7 @@ const selectRight = document.getElementById("selectRight")
 const input1 = document.getElementById("input1");
 const input2 = document.getElementById("input2");
 
-input1.addEventListener("change", () => {
+input1.addEventListener("input", () => {
     var rate = selectRight.value / selectLeft.value
     console.log(rate * input1.value);
     input2.value = rate * input1.value
