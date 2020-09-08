@@ -7,43 +7,20 @@ body {
     display: grid;
     place-items: center;
     height: 100vh;
-    border: 2px solid green;
+    background-color: #242333
 }
 
 .container {
     display: grid;
-    border: 2px solid red;
-    grid-template-areas: "h1 h1 " " img img" "item1 item2";
-    width: fit-content;
-}
-
-.container-left {
-    border: 2px solid red;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    grid-area: item1;
-}
-
-#input,
-#select {
-    flex: 1;
-}
-
-.container-right {
-    border: 2px solid green;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    grid-area: item2;
+    grid-template-areas: "h1 h1 h1" " img img img" "item1 item item2";
+    width: 38%;
 }
 
 .deneme {
-    background-color: red;
+    background-color: #e74c3c;
     height: 2rem;
     color: #fff;
     grid-area: h1;
-    border: 4px solid black;
     display: grid;
     place-items: center;
 }
@@ -52,14 +29,40 @@ body {
     grid-area: img;
     height: 200px;
     background-image: url("./exchange.jpg");
-    background-size: 200px 200px;
+    background-size: cover;
+}
+
+.container-left {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    grid-area: item1;
+}
+
+input,
+select {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.container-right {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    grid-area: item2;
+}
+
+.container-middle {
+    border: 2px solid red;
+    grid-area: item;
+}
+
+.container-middle img {
+    width: 5rem;
+    height: 3rem;
 }
 
 @media(max-width:768px) {
-    .container-left,
-    .container-right {
-        width: 45vw;
-    }
     .container {
         width: 98vw;
     }
