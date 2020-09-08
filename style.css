@@ -16,10 +16,11 @@ body {
     width: 38%;
 }
 
-.deneme {
+.description {
     background-color: #e74c3c;
     height: 2rem;
     color: #fff;
+    font-size: 28px;
     grid-area: h1;
     display: grid;
     place-items: center;
